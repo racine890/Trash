@@ -1,5 +1,6 @@
 from ch2 import ch_data
 from tkinter import messagebox
+from os import system
 
 def restoreApp(projectFold):
     appName = ch_data('Title:', projectFold+'home.ch')
