@@ -35,7 +35,7 @@ button.width: 150
 ConfigButton 0 fg='#FFFFFF', bg='#00AA00'
 ConfigButton 1 fg='#FFFFFF', bg='#AA0000'
 ReadFile C:\GC\installed\deleted.dat
-evaluate [x.split('\\')[-1] for x in {LASTRESULT}.split('\n') if x != '' and x[0] != "#"]
+evaluate [x.split('\\')[-1].strip() for x in {LASTRESULT}.split('\n') if x != '' and x[0] != "#"]
 evaluate list( set( {LASTRESULT} ) )
 SetVar *del LASTRESULT
 create ListBox with *del
